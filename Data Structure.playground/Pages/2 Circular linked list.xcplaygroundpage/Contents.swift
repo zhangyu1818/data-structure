@@ -23,6 +23,12 @@ class CircularLinkedList<T> {
         }
     }
 
+    func append<R: Sequence>(range: R) where R.Element == T {
+        for value in range {
+            append(value)
+        }
+    }
+
     func forEach(_ cb: (T) -> Void) {
         guard var node = first else { return }
         while let next = node.next {
@@ -50,12 +56,6 @@ extension CircularLinkedList where T: Comparable {
         node.next = newNode
         if node === last {
             head = newNode
-        }
-    }
-
-    func append<R: Sequence>(range: R) where R: RangeExpression, R.Element == T {
-        for value in range {
-            append(value)
         }
     }
 }

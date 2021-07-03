@@ -37,6 +37,12 @@ class LinkedList<T> {
         }
     }
 
+    func append<R: Sequence>(range: R) where R.Element == T {
+        for value in range {
+            append(value)
+        }
+    }
+
     func insert(at index: Int, value: T) {
         guard var node = head else { return }
         var i = 0
@@ -80,17 +86,7 @@ class LinkedList<T> {
         return node
     }
 
-    func forEach(_ cb: (T) -> Void) {
-        var node = head
-        while node != nil {
-            cb(node!.value)
-            node = node!.next
-        }
-    }
-}
-
-extension LinkedList where T: Equatable {
-    func at(of value: T) -> Node<T>? {
+    func at(of value: T) -> Node<T>? where T: Equatable {
         guard var node = head else {
             return nil
         }
@@ -102,12 +98,12 @@ extension LinkedList where T: Equatable {
         }
         return nil
     }
-}
 
-extension LinkedList where T: Comparable {
-    func append<R: Sequence>(range: R) where R: RangeExpression, R.Element == T {
-        for value in range {
-            append(value)
+    func forEach(_ cb: (T) -> Void) {
+        var node = head
+        while node != nil {
+            cb(node!.value)
+            node = node!.next
         }
     }
 }
