@@ -112,14 +112,9 @@ extension LinkedList where T: Comparable {
     }
 }
 
-extension LinkedList {
-    func append<R: Sequence>(range _: R) where R: RangeExpression {
-//        for value in range {
-//            append(value)
-//        }
-    }
-}
-
+/**
+ 分别获取index为奇数和偶数的链表
+ */
 func getOddAndEven<T>(_ linkedList: LinkedList<T>) -> (odd: LinkedList<T>, even: LinkedList<T>) {
     let odd = LinkedList<T>()
     let even = LinkedList<T>()
@@ -142,6 +137,9 @@ func getOddAndEven<T>(_ linkedList: LinkedList<T>) -> (odd: LinkedList<T>, even:
     return (odd, even)
 }
 
+/**
+ 合并两条值顺序递增的链表
+ */
 func mergeLinkedList<T: Comparable>(_ a: LinkedList<T>, _ b: LinkedList<T>) -> LinkedList<T> {
     let mergedList = LinkedList<T>()
     var aNode = a.first
