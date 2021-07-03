@@ -14,3 +14,4 @@
 
 [循环链表](https://github.com/zhangyu1818/data-structure/blob/main/Data%20Structure.playground/Pages/2%20Circular%20linked%20list.xcplaygroundpage/Contents.swift)
 
+[双向循环链表](https://github.com/zhangyu1818/data-structure/blob/main/Data%20Structure.playground/Pages/3%20Doubly%20linked%20list.xcplaygroundpage/Contents.swift)
