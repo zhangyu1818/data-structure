@@ -4,5 +4,7 @@
         <page name='2 Circular linked list'/>
         <page name='1 Singly linked list '/>
         <page name='3 Doubly linked list'/>
+        <page name='4 Stack'/>
+        <page name='5 Linked Stack'/>
     </pages>
 </playground>
