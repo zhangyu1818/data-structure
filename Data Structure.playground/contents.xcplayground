@@ -6,5 +6,6 @@
         <page name='3 Doubly linked list'/>
         <page name='4 Stack'/>
         <page name='5 Linked Stack'/>
+        <page name='6 Queue'/>
     </pages>
 </playground>

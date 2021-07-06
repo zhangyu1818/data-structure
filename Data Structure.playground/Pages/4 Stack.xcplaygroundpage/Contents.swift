@@ -13,3 +13,12 @@ class Stack<T> {
         isEmpty ? nil : values.removeLast()
     }
 }
+
+func fact(_ value: Int) -> Int {
+    if value == 0 {
+        return 1
+    }
+    return value * fact(value - 1)
+}
+
+print(fact(5))
