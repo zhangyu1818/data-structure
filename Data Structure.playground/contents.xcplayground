@@ -7,5 +7,6 @@
         <page name='4 Stack'/>
         <page name='5 Linked Stack'/>
         <page name='6 Queue'/>
+        <page name='7 Linked Queue'/>
     </pages>
 </playground>
